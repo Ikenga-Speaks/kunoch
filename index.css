@@ -23,7 +23,7 @@
     background: var(--clr-blue);
     padding: 25px 45px;
 }
-.head1{
+h1{
     color: var(--clr-white);
     font-size: 30px;
     font-weight: bold;
@@ -43,6 +43,7 @@
     color: var(--clr-white);
     font-size: 20px;
     display: none;
+    cursor: pointer;
 }
 .navs{
     display: flex;
@@ -167,6 +168,7 @@
 .servicecountainer div{
     background: var(--clr-gray);
     padding: 25px 10px;
+    border-radius: 15px;
 }
 .servicecountainer div:hover{
     background: var(--clr-red);
@@ -354,10 +356,11 @@ form textarea{
 }
 
 /* Media query for Mobile */
-@media screen  and (min-width:0) and (max-width:750px){
+@media screen  and (min-width:0) and (max-width:768px){
     .menuicon {
         display: block;
         font-size: 30px;
+        cursor: pointer;
     }
     .navs{
         position: absolute;
@@ -365,7 +368,7 @@ form textarea{
         left: 0;
         right: 0;
         top: 85px;
-        height: 100vh;
+        max-height: 100vh;
         text-align: right;
         display: none;
         flex-direction: column;
@@ -387,11 +390,57 @@ form textarea{
     }
     .home{
         display: block;
+        position: relative;
+        /* right: 5px; */
+    }
+    .homewriteup{
+        position: relative;
+        right: 48px;
+    }
+    .homebutton{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        position: relative;
+        /* right: 65px; */
+        max-width: 270px;
     }
     #services div{
         /* display: block; */
         grid-template-columns: 1fr;
         row-gap: 20px;
+    }
+    #services{
+        /* margin: -5% 0; */
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+    }
+    .services h2{
+        font-weight: bold;
+        font-size: 35px;
+        margin: 0 60px;
+        
+    }
+    .servicecountainer div{
+        /* background: var(--clr-gray); */
+        padding: 5px 40px;
+        border-radius: 15px;
+        text-align: center;
+        min-width: 300px;
+        
+    }
+    .servicecountainer div h3{
+        font-weight: bold;
+    }
+    #servicecountainer div i{
+        margin: -25px 0;
+    }
+    .about_us .p2{
+        text-align: justify;
+        max-width: 210%;
+        position: relative;
+        /* right:px; */
     }
     .about_us .about_usmain{
         display: block;
@@ -405,11 +454,18 @@ form textarea{
     .about_us_image{
         padding: 25px ;
     }
+    .about_us_mission{
+        text-align: center;
+    }
+    .about_us_mission h3{
+        display: grid;
+    }
     .about_us_mission p{
         text-align: justify;
-        width: 350px;
-        position: relative;
-        left: -125px;
+        min-width: 100%;
+        position: relative;    
+        right: 100px;
+        /* left: -15px; */
     }
     .our-team{
         align-items: center;
@@ -430,6 +486,14 @@ form textarea{
     .contact-form{
        display: flex;
        justify-content: center;
+    }
+    .contact-form form .input{
+        display: flex;
+        justify-content: center;
+        width: 330px;
+    }
+    .contact-form form .textarea{
+        width: 330px;
     }
     .footerhouse{
         display: block;
